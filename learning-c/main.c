@@ -8,18 +8,17 @@
 
 #include <stdio.h>
 
+/* all of the functions */
+//fahrenheit.c
+void fahrenheitTable();
+float fahrenheit(float celsius), celsius(float fahr);
+
+//filez.c
+double charcount();
+int linecount(), wordcount();
+
 int main()
 {
-    /* all of the functions */
-    
-    //fahrenheit.c
-    void fahrenheitTable();
-    float fahrenheit(float celsius), celsius(float fahr);
-    
-    //filez.c
-    double charcount();
-    int linecount(), wordcount();
-    
     wordcount();
     
     return 0;
