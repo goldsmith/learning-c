@@ -18,9 +18,9 @@ int main()
     
     //filez.c
     double charcount();
-    int linecount();
+    int linecount(), wordcount();
     
-    linecount();
+    wordcount();
     
     return 0;
 }
