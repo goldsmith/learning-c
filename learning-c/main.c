@@ -10,22 +10,17 @@
 
 int main()
 {
-    //all of the functions
+    /* all of the functions */
+    
+    //fahrenheit.c
     void fahrenheitTable();
     float fahrenheit(float celsius), celsius(float fahr);
+    
+    //filez.c
     double charcount();
+    int linecount();
     
-    charcount();
-    
-    
-    /* unused functions
-     
-    fahrenheitTable();
-    fahrenheit(-40.0);
-    celsius(212.0);
-     
-    */
-    
+    linecount();
     
     return 0;
 }
