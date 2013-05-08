@@ -12,10 +12,13 @@ int main()
 {
     void fahrenheitTable();
     float fahrenheit(float celsius), celsius(float fahr);
+    long charcount();
     
-    fahrenheitTable();
-    fahrenheit(-40.0);
-    celsius(212.0);
+//    fahrenheitTable();
+//    fahrenheit(-40.0);
+//    celsius(212.0);
+    
+    charcount();
     
     return 0;
 }
