@@ -8,16 +8,20 @@
 
 #include <stdio.h>
 
-long charcount() {
-    long nc;
+double charcount() {
+    double nc; //num characters
     int end;
     
-    nc = 0;
-    while (getchar() != EOF)
-        nc++;
+    //empty for loop to increment nc
+    for (nc =0; getchar() != EOF; nc++);
+    
+    //last character
     end = getchar();
+    
     printf("EOF: %d\n", end);
-    printf("num characters: %ld\n", nc);
+    printf("num characters: %f\n", nc);
     
     return nc;
 }
+
+
