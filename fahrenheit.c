@@ -18,11 +18,10 @@
 void fahrenheitTable() {
     float fahr, celsius;
     
-    fahr = LOWER;
-    while (fahr <= UPPER) {
+    //same syntax as javascript for for loops, except you must intialize looping variable first
+    for (fahr = LOWER; fahr <= UPPER; fahr += STEP) {
         celsius = (5.0/9.0) * (fahr - 32.0);
         printf("%3.0f %6.1f\n", fahr, celsius);
-        fahr = fahr + STEP;
     }
 }
 
