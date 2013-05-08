@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		65BE6E5A1739F42400B81E38 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 65BE6E591739F42400B81E38 /* main.c */; };
 		65BE6E5C1739F42400B81E38 /* learning_c.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65BE6E5B1739F42400B81E38 /* learning_c.1 */; };
+		65BE6E631739F44300B81E38 /* fahrenheit.c in Sources */ = {isa = PBXBuildFile; fileRef = 65BE6E621739F44300B81E38 /* fahrenheit.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,7 @@
 		65BE6E561739F42400B81E38 /* learning-c */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "learning-c"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BE6E591739F42400B81E38 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		65BE6E5B1739F42400B81E38 /* learning_c.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = learning_c.1; sourceTree = "<group>"; };
+		65BE6E621739F44300B81E38 /* fahrenheit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fahrenheit.c; path = ../fahrenheit.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		65BE6E581739F42400B81E38 /* learning-c */ = {
 			isa = PBXGroup;
 			children = (
+				65BE6E621739F44300B81E38 /* fahrenheit.c */,
 				65BE6E591739F42400B81E38 /* main.c */,
 				65BE6E5B1739F42400B81E38 /* learning_c.1 */,
 			);
@@ -118,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65BE6E5A1739F42400B81E38 /* main.c in Sources */,
+				65BE6E631739F44300B81E38 /* fahrenheit.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,15 +145,16 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 1;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
@@ -174,9 +179,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
@@ -186,6 +192,7 @@
 		65BE6E601739F42400B81E38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -193,6 +200,7 @@
 		65BE6E611739F42400B81E38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

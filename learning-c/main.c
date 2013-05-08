@@ -8,11 +8,15 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[])
+int main()
 {
-
-    // insert code here...
-    printf("Hello, World!\n");
+    void fahrenheitTable();
+    float fahrenheit(float celsius), celsius(float fahr);
+    
+    fahrenheitTable();
+    fahrenheit(-40.0);
+    celsius(212.0);
+    
     return 0;
 }
 
