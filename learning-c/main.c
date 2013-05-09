@@ -12,6 +12,7 @@
 //fahrenheit.c
 void fahrenheitTable();
 float fahrenheit(float celsius), celsius(float fahr);
+void longest_line();
 
 //filez.c
 double charcount();
@@ -19,7 +20,7 @@ int linecount(), wordcount();
 
 int main()
 {
-    wordcount();
+    longest_line();
     
     return 0;
 }
