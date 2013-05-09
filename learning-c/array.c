@@ -7,8 +7,9 @@
 //
 
 #include <stdio.h>
-#define MAXLINE 1000 //maximum input line length
+#define MAXLINE 100 //maximum input line length
 
+/* print the longest line in an input */
 void longest_line() {
     int len;                //curent line length
     int max;                //max length seen so far
@@ -49,4 +50,44 @@ void copy(char to[], char from[]) {
     i = 0;
     while ((to[i] = from[i]) != '\0')
         i++;
+}
+
+/* count the length of a long character array
+    assumes sequential array beginning at 0 */
+int length(char s[]) {
+    int len;
+
+    for (len=0; !(s[len] <= 0); len++); //go through array until a non-ascii value is found
+    return len; //overcounts by 1
+}
+
+/* reverses a char array 'from' into 'to' */
+void reverse(char from[], char to[], int length) {
+    int i;    
+
+    for (i=0; i<length; i++) 
+        to[length-i-1] = from[i]; //place characters in 'to' backwards
+    
+    printf("\n"); //put on line after input
+    for (i=0; i<length; i++)
+        printf("%c", to[i]);
+    
+}
+
+/* reverse an input char array up to 100 chars long */
+void reverse_input() {
+    int c;
+    char s[100];
+    printf("on the following lines type up to 100 chars to be reversed\n");
+    
+    int i = 0;
+    while ((c=getchar()) != EOF && i < 100) {
+        s[i] = c;
+        i++;
+    }
+    
+    int len = length(s);
+    char to[100];
+    
+    reverse(s, to, len);
 }

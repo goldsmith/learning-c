@@ -8,19 +8,24 @@
 
 #include <stdio.h>
 
-/* all of the functions */
+/* -------all of the functions-------- */
 //fahrenheit.c
 void fahrenheitTable();
 float fahrenheit(float celsius), celsius(float fahr);
-void longest_line();
 
 //filez.c
 double charcount();
 int linecount(), wordcount();
 
+//array.c
+void reverse_input(), reverse(char from[], char to[], int length), copy(), longest_line();
+int get_line(), length(char s[]);
+
+
+/* --------main--------- */
 int main()
 {
-    longest_line();
+    reverse_input();
     
     return 0;
 }
