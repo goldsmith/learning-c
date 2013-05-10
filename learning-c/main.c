@@ -18,14 +18,14 @@ double charcount();
 int linecount(), wordcount();
 
 //array.c
-void reverse_input(), reverse(char from[], char to[], int length), copy(), longest_line();
+void reverse_input(), reverse(char from[], char to[], int length), reverse_line_input();
+void copy(), longest_line(), print_array(char s[], int len);
 int get_line(), length(char s[]);
-
 
 /* --------main--------- */
 int main()
 {
-    reverse_input();
+    reverse_line_input();
     
     return 0;
 }

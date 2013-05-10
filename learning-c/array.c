@@ -43,7 +43,7 @@ int get_line(char s[]) {
     return i;
 }
 
-/* copy 'from' into 'to'; assime to is big enough */
+/* copy 'from' into 'to'; assume to is big enough */
 void copy(char to[], char from[]) {
     int i;
     
@@ -90,4 +90,16 @@ void reverse_input() {
     char to[100];
     
     reverse(s, to, len);
+}
+
+/* reverse input one line at a time */
+void reverse_line_input() {
+    char line[MAXLINE], reversed[MAXLINE];
+    int len, i;
+    printf("type up to 100 chars to be reversed one line at a time\n");
+    while ((i=get_line(line) > 0)) { //go through input one line at a time
+        len = length(line);
+        reverse(line, reversed, len);
+        printf("\n");
+    }
 }
