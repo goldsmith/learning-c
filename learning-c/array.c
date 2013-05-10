@@ -65,7 +65,7 @@ int length(char s[]) {
 void print_array(char s[], int len) {
     int i;
     for (i=0; i<len; i++)
-        printf("%d", s[i]);
+        printf("%c", s[i]);
 }
 
 /* reverses a char array 'from' into 'to' */
@@ -109,4 +109,43 @@ void reverse_line_input() {
         reverse(line, reversed, len);
         printf("\n");
     }
+}
+
+/* strip trailing spaces and tabs from 'from' into 'to'
+    assumes to is long enough */
+void strip(char from[], char to[]) {
+    int i, j, stop;
+    
+    int len = length(from);
+    int end = len; //assume that there are no trailing spaces
+    
+    for (i=0; i < len; i++) {
+        stop = 1;
+        for (j=i; j<len; j++) { //look at the rest of the array
+            if (from[j] != ' ' && from[j] != '\t') {
+                stop = 0; //there are still remaining characters
+                break;
+            }
+        }
+        if (stop) {
+            end = i; //last non-space character is at current i
+            break;
+        }
+    }
+    
+    for (i=0; i < end; i++)
+        to[i] = from[i];
+}
+
+/* strips trailing spaces and tabs of input */
+void strip_input() {
+    char c, input[MAXLINE], stripped[MAXLINE];
+    int i;
+    for (i=0; (c=getchar()) != EOF; i++) {
+        input[i] = c;
+    }
+    
+    strip(input, stripped);
+    printf("\n");
+    print_array(stripped, length(stripped));
 }
