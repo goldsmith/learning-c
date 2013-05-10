@@ -61,6 +61,13 @@ int length(char s[]) {
     return len; //overcounts by 1
 }
 
+/* prints char array s */
+void print_array(char s[], int len) {
+    int i;
+    for (i=0; i<len; i++)
+        printf("%d", s[i]);
+}
+
 /* reverses a char array 'from' into 'to' */
 void reverse(char from[], char to[], int length) {
     int i;    
